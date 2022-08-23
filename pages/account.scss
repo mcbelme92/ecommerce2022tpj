@@ -1,0 +1,40 @@
+.account{
+ 
+    &__configuration,
+    &__addresses{
+        position: relative;
+        padding: 10px;
+
+        .title{
+            width: max-content;
+            background-color: $background-dark-absolute;
+            color: $font-light;
+            padding: 5px 10px;
+            border-radius: 5px 5px 0;
+        }
+
+        .data{
+            background-color: $font-trasnparent-gray;
+            box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        
+    }
+    
+    &__addresses{
+        
+        .title2{
+            padding: 5px 10px;
+            border-radius: 5px 5px 0;
+            background-color: $background-dark-absolute;
+            position: absolute;
+            right: 10px;
+            color: $font-light;
+            margin-top: -29px;
+            
+        
+        
+    }
+        
+    }
+
+}

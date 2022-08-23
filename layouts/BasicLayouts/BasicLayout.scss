@@ -1,0 +1,26 @@
+
+
+ .basic-layout{
+    min-height: 100vh;
+    background-image: url("https://game-ecommerce2022.s3.amazonaws.com/static/backgroundimage.jpg");
+    background-size: cover;
+    background-position: center;
+
+    .content{
+        
+        background-color: rgba(155, 155, 160, 0.511);
+        
+        // la pagina web no haga scroll se quede fija se le resta al HEADER 130px
+        height: calc(100vh - 130px);
+        //borde negro 
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75); 
+        //para que se vertical el scroll limite y solo haga scrol en el contenido
+        overflow-y: scroll;
+        //oculta la bara lateral que hace scroll
+        &::-webkit-scrollbar{
+            display: none;
+        }
+    }
+}

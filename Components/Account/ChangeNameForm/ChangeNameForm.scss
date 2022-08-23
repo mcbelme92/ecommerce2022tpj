@@ -1,0 +1,17 @@
+.change-name-form{
+    padding: 50px 15px;
+    
+    > h4{
+        color: $primary;
+        font-size: 22px;
+    }
+// EL FORMULARIO QUE ENCUENTRE
+
+    >Form{
+        text-align: center;
+
+        .submit{
+            padding: 12px 60px;
+        }
+    }
+}

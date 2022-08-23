@@ -1,0 +1,10 @@
+.platforms{
+    .content{
+        padding: 20px;
+    }
+
+//cambio ultimo validar si funciona esto 
+    .ui.loader::after{
+    border-color: $primary transparent transparent;
+    }
+}

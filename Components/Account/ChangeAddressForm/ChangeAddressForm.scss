@@ -1,0 +1,46 @@
+.change-address-form{
+    padding: 20px 15px;
+    
+    ul {
+        width: 1000px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px;
+      }
+      ul li {
+        width: calc(100% - 500px);
+        
+        height: 75px;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .ui.input{
+            width: 220px;
+        }
+      }
+
+    
+
+    >h4{
+        color: $primary;
+        font-size: 22px;
+
+        >span{
+            font-weight: 100;
+            font-size: 12px;
+        }
+    }
+
+    >form{
+        
+        text-align: center;
+        .submit{
+            padding: 13px 60px;    
+        }
+        
+    }
+}

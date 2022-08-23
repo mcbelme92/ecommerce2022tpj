@@ -1,0 +1,49 @@
+//SE IMPORTARA TODOS LSO SCSS ED LSO COMPONENTES AQUI
+//ya que aqui es donde next los necesita para que funcionen
+@import "./colors.scss";
+//Layouts
+@import "../layouts/BasicLayouts/BasicLayout.scss";
+
+//Pages
+@import "../pages/account.scss";
+@import "../pages/wishlist.scss";
+@import "../pages/search.scss";
+@import "../pages/cart.scss";
+@import "../pages/orders.scss";
+
+//Home index.js
+@import "../pages/index.scss";
+//Header
+@import "../Components/Header/Header.scss";
+@import "../Components/Header/topbar/TopBar.scss";
+@import "../Components/Header/Menu/Menu.scss";
+@import "../Components/Modal/BasicModal.scss";
+@import "../Components/Auth/LoginForm/LoginForm.scss";
+//Form
+@import "../Components/Account/ChangeNameForm/ChangeNameForm.scss";
+@import "../Components/Account/ChangeEmailForm/ChangeEmailForm.scss";
+@import "../Components/Account/ChangePasswordForm/ChangePasswordForm.scss";
+@import "../Components/Account/ChangePhoneForm/ChangePhoneForm.scss";
+@import "../Components/Account/ChangeAddressForm/ChangeAddressForm.scss";
+//listaddresss
+@import "../Components/Account/ListAddress/ListAddress.scss";
+//ListGames
+@import "../Components/ListGames/ListGames.scss";
+//Cart
+//SummaryCart
+@import "../Components/Cart/SummaryCart/SummaryCart.scss";
+@import "../Components/Cart/AddressShiupping/AddressShipping.scss";
+@import "../Components/Cart/Payment/Payment.scss";
+@import "../Components/Cart/Payment/FormPayment/FormPayment.scss";
+// platform
+@import "../pages/games/platform.scss";
+//Pagination
+@import "../Components/pagination/Pagination.scss";
+//GameInformation
+@import "../pages/game.scss";
+@import "../Components/Game/HeaderGame/HeaderGame.scss";
+@import "../Components/Game/TabsGame/TabsGame.scss";
+@import "../Components/Game/InfoGame/InfoGame.scss";
+@import "../Components/Game/CarouselScreen/CarouselScreen.scss";
+//Orders
+@import "../Components/Orders/OrderInfo/OrderInfo.scss";

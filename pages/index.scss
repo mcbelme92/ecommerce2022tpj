@@ -1,0 +1,10 @@
+.Home{
+
+    .content{
+        padding: 20px; 
+    }
+    
+    .ui.loader::after{
+        border-color: $primary transparent transparent;
+        }
+}
