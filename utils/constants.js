@@ -1,5 +1,5 @@
-// export const BASE_PATH = "http://localhost:1337";
-export const BASE_PATH = "https://salty-dawn-19167.herokuapp.com";
+/* export const BASE_PATH = "http://localhost:1337"; */
+export const BASE_PATH = "https://strapitestrender.onrender.com";
 export const TOKEN = "token";
 export const CART = "cart";
 //clave publica de stripe
