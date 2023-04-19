@@ -3,3 +3,4 @@
 .next
 # dependencies
 /node_modules
+build
