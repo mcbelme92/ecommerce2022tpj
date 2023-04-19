@@ -14,7 +14,7 @@ export default function Orders() {
   useEffect(() => {
     (async () => {
       const response = await getOrdersApi(auth.idUser, logout);
-      //si response tiene valor lo poines sino ponme un arreglo vacio array blank
+      //si response tiene valor lo pones sino ponme un arreglo vacio array blank
       setOrders(response || []);
     })();
   }, []);
@@ -43,8 +43,13 @@ function OrderList(props) {
   return (
     <Grid>
       {map(orders, (order) => (
-        <Grid.Column mobile={16} table={6} computer={8}>
+        <Grid.Column mobile={16} table={6} computer={8} key={order.id}>
           <OrderInfo order={order} key={order.id} />
+          {/* {order?.game?.data?.attributes.title === undefined ? (
+            <p key={order.id}>Objeto sin imagen</p>
+          ) : (
+            <OrderInfo order={order} key={order.id} />
+          )} */}
         </Grid.Column>
       ))}
     </Grid>

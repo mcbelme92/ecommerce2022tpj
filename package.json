@@ -7,6 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "export": "next export",
+    "deploy": "yarn build && yarn export",
     "start": "next start",
     "lint": "next lint"
   },
@@ -22,6 +23,8 @@
     "moment": "^2.29.3",
     "netlify-cli": "^13.2.2",
     "next": "12.1.5",
+    "next-compose-plugins": "^2.2.1",
+    "next-optimized-images": "^2.6.2",
     "node-sass": "^7.0.1",
     "query-string": "^7.1.1",
     "react": "18.0.0",
@@ -34,6 +37,7 @@
     "yup": "^0.32.11"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^4.35.0",
     "esbuild-loader": "^2.19.0",
     "eslint": "8.13.0",
     "eslint-config-next": "12.1.5",

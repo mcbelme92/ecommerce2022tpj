@@ -7,9 +7,22 @@ import BasicModal from "../../Modal/BasicModal";
 
 export default function OrderInfo(props) {
   const { order } = props;
-  const { game, totalPayment, idPayment, adressesShipping, createAt } =
-    order.attributes;
-  const { title, poster, url } = game.data.attributes;
+
+  const {
+    game,
+    totalPayment,
+    idPayment,
+    adressesShipping,
+    createAt,
+    publishedAt,
+    updatedAt,
+  } = order?.attributes;
+  /* console.log(order?.attributes.game.data.attributes); */
+  if (!game.data) {
+    return null;
+  }
+
+  const { title, poster, url } = game.data?.attributes;
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -19,10 +32,9 @@ export default function OrderInfo(props) {
           <div className="order__info-data">
             <Link href={`/${url}`}>
               <a>
-                <Image src={poster.data.attributes.url} alt={title} />
+                <Image src={poster?.data.attributes?.url} alt={title} />
               </a>
             </Link>
-
             <div>
               <h2>{title}</h2>
               <p>Costo por orden: ${totalPayment}</p>
@@ -31,7 +43,8 @@ export default function OrderInfo(props) {
         </div>
         <div className="order__other">
           <p className="order__other-date">
-            {moment(createAt).format("L")} - {moment(createAt).format("LT")}
+            {moment(publishedAt).format("L")} -{" "}
+            {moment(publishedAt).format("LT")}
           </p>
           <Icon name="eye" circular link onClick={() => setShowModal(true)} />
         </div>
@@ -56,7 +69,7 @@ function AddressModal(props) {
       show={showModal}
       setShow={setShowModal}
       size="tiny"
-      title={title}
+      title={!title && "titulo no diponible"}
     >
       <h3>id de la orden: {idPayment}</h3>
       <h4>{`El pedido se ha enviado :`}</h4>

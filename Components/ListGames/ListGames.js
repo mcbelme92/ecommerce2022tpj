@@ -37,7 +37,7 @@ export default function ListGames(props) {
         <GridRow columns={getColumnsRender()}>
           {map(games, (game, index) => (
             //games inicial
-            <GamesRender games={game.attributes} key={index} />
+            <GamesRender games={game?.attributes} key={index} />
           ))}
         </GridRow>
       </Grid>
@@ -48,7 +48,10 @@ export default function ListGames(props) {
 function GamesRender(props) {
   // informacion del videojuego desestructurada
   const { games } = props;
-  const urlGame = games.url;
+  if (!games) {
+    return undefined;
+  }
+  const urlGame = games?.url;
   const poster = games.poster.data.attributes.url;
   const descuento = games.discount;
   const precioGame = games.price;
