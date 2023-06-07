@@ -1,79 +1,95 @@
 .menu {
-    background-color: $background-grey-dark;
-    border-radius: 0;
-    .ui.container{
-        width: 1072px;
+  background-color: $background-grey-dark;
+  border-radius: 0;
+  .ui.container {
+    width: 1072px;
+  }
+  .ui.grid {
+    margin: 0;
+  }
+  &__left {
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    .item {
+      display: flex;
+      align-items: center;
+      i.icon {
+        margin-right: 8px !important;
+      }
     }
-    .ui.grid{
-        margin: 0;
-        
-    }
+  }
+  // Responsivo a partir de 768px de ancho
+@media only screen and (max-width: 770px) {
+  &__left {
+    justify-content: left;
     
-
-        // afecta a las dos partes
-    &__left{
-        padding: 0 !important;
-        display: flex !important;
-        align-items: center;
-        //@at-root
-        display: flex;    
-        justify-content: flex-end;
-    }
-    // &__left{
-    //     display: flex;    
-    //     justify-content: flex-end;
-    // }
-    &__right{
-        padding: 0 !important;
-        display: flex !important;
-        align-items: center;
-        display: flex;    
-        justify-content: flex-end;
-        
-    }
-
-    // &__right{
-        
-    //     display: flex;    
-    //     justify-content: flex-end;
-    // }
-
-    
-
-    .ui.menu{
-        border: 0;
-        box-shadow: none;
-        height: 100%;
-        background: transparent;
-        
-
-        .icon{
-            margin-right: 10px !important;
-            color: $primary;
-        }
-
-        .item{
-            color: $font-light;
-            border-radius: 0 !important;
-            
-            
-            
-
-            &:hover{
-                color: $font-light;
-                background-color: $background-dark-absolute;
-
-                &:before{
-                    background-color: $background-dark-absolute;
-                }
-            }
-
-            &.m-0 i{
-                margin: 0 !important;
-            }
-
-        }
-    }
-
+  }
 }
-
+  &__right {
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+       // Cuando sea menor a 675px se pondrá a la derecha
+       @media only screen and (max-width: 816px) {
+        justify-content: flex-start;
+      }
+    .item {
+      display: flex;
+      align-items: center;
+      i.icon {
+        margin-right: 8px !important;
+      }
+    }
+  }
+  .ui.menu {
+    border: 0;
+    box-shadow: none;
+    height: 100%;
+    background: transparent;
+    font-size: 0.9rem;
+    .icon {
+      color: $primary;
+    }
+    .item {
+      color: $font-light;
+      border-radius: 0 !important;
+      &:hover {
+        color: $font-light;
+        background-color: $background-dark-absolute;
+        &:before {
+          background-color: $background-dark-absolute;
+        }
+      }
+      &.m-0 i {
+        margin: 0 !important;
+      }
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+    .menuSection {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      &.leftSection {
+        margin-bottom: 10px;
+      }
+      &.rightSection {
+        margin-top: 10px;
+      }
+      .icon {
+        margin-right: 0 !important;
+      }
+      .cartIcon {
+        margin-left: 10px;
+      }
+    }
+  }
+}

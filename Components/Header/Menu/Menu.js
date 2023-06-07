@@ -9,7 +9,6 @@ import { map, _ } from "lodash";
 import { getMeApi } from "../../../api/user";
 import ResponsiveRender from "../../../utils/responsiveRender";
 import { getPlatformsApi } from "../../../api/platform";
-import useWindowSize from "../../../hooks/UseWindowSize";
 
 export default function MenuWeb() {
   const [platforms, setPlatforms] = useState([]);
@@ -17,8 +16,6 @@ export default function MenuWeb() {
   const [titleModal, setTitleModal] = useState("Iniciar Sesion");
   const [user, setUser] = useState(undefined);
   const { logout, auth } = useAuth();
-  const { width } = useWindowSize();
-  const columnsResponsive = ResponsiveRender();
 
   useEffect(() => {
     //funcion asincrona anonima que se autollama
@@ -48,13 +45,26 @@ export default function MenuWeb() {
   return (
     <div className="menu">
       <Container>
-        <Grid>
+        <Grid stackable>
           {map(platforms, (platform, index) => (
-            <Grid.Column className="menu__left" width={1} key={index}>
+            <Grid.Column
+              className="menu__left"
+              mobile={1}
+              tablet={1}
+              computer={1}
+              /* width={1} */
+              key={index}
+            >
               <MenuPlatforms platform={platform.attributes} />
             </Grid.Column>
           ))}
-          <Grid.Column className="menu__right" width={12}>
+          <Grid.Column
+            className="menu__right"
+            mobile={16}
+            tablet={16}
+            computer={12}
+            /* width={12} */
+          >
             {/* si user es diferente a UNDEFINED singiifica que la peticion response ya ha sido ejecutada y el user esta logueado sino es undefined */}
             {user !== undefined && (
               <MenuOptions

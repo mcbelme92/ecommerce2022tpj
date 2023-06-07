@@ -1,72 +1,93 @@
-.top-bar{
+.top-bar {
     height: 90px;
     background-color: $background-dark;
-
-    .ui.grid{
-        margin: 0;
+  
+    .ui.grid {
+      margin: 0;
+      padding: 0;
+      .column {
         padding: 0;
-        .column{
-            padding: 0;
-        }
+      }
     }
-    // & concatena
-    &__left{
-        display: flex !important;
-        align-items: center !important;
-
-        .Logotipo{
-            content:url("https://game-ecommerce2022.s3.amazonaws.com/logo_88b0ff8e8f.png?updated_at=2022-04-30T00:07:07.671Z");
+  
+    &__left {
+      display: flex !important;
+      align-items: center !important;
+  
+      .Logotipo {
+        content: url("https://game-ecommerce2022.s3.amazonaws.com/logo_88b0ff8e8f.png?updated_at=2022-04-30T00:07:07.671Z");
+      }
+  
+      img {
+        height: 50px;
+        transition: all 0.5s;
+  
+        &:hover {
+          transform: translateX(-15px);
         }
-
-        img{
-            height: 50px;
-            transition: all 0.5s;
-            
-
-            &:hover{
-                transform: translateX(-15px);
-            }
-        }
+      }
     }
-
-    &__right{
-        display: flex !important;
+  
+    &__right {
+      display: flex !important;
+      align-items: center;
+      justify-content: flex-end;
+  
+      .ui.icon.input > input {
+        padding-right: 5px !important;
+      }
+  
+      .ui.input {
         align-items: center;
-        justify-content: flex-end; 
-
-        .ui.icon.input > input {
-            padding-right: 5px !important;
+        margin-right: 25px;
+  
+        input {
+          background-color: transparent !important;
+          border: 0;
+          border-bottom: 2px solid $primary !important;
+          border-radius: 0;
+          color: $primary !important;
+          padding: 5px 0;
+          width: 220px;
+          font-size: 20px;
+          transition: width 0.7s;
+  
+          &:focus {
+            width: 350px;
+          }
         }
-
-        .ui.input {
-
-            align-items: center;
-            margin-right: 25px;
-
-            input{
-                background-color: transparent !important;
-                border: 0;
-                border-bottom: 2px solid $primary !important;
-                border-radius: 0;
-                color: $primary !important;
-                padding: 5px 0;
-                width: 220px;
-                font-size: 20px;
-                transition: width 0.7s;
-
-                &:focus{
-                    width: 350px;
-                }
-
-                
-            }
-
-            i{
-                color: $primary;
-                opacity: 1 !important;
-                font-size: 25px;
-                right: -50px !important;
-            }
+  
+        i {
+          color: $primary;
+          opacity: 1 !important;
+          font-size: 25px;
+          right: -50px !important;
         }
+      }
     }
-}
+  
+    // Responsivo a partir de 550px de ancho
+    @media only screen and (max-width: 550px) {
+      .top-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+  
+      .top-bar__right {
+        margin-top: 10px;
+        justify-content: center;
+  
+        .ui.input {
+          margin-right: 0;
+          margin-bottom: 10px;
+  
+          input {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  

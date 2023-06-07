@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { Container, Grid, Image, Input } from "semantic-ui-react";
+import { Container, Grid, Image, Input, Responsive } from "semantic-ui-react";
 import Link from "next/link";
 
 export default function TopBar() {

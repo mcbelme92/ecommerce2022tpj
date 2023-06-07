@@ -3,12 +3,12 @@ const {
   // ESBuildMinifyPlugin
 } = require("esbuild-loader");
 const withPlugins = require("next-compose-plugins");
-const withOptimizedImages = require("next-optimized-images");
+//const withOptimizedImages = require("next-optimized-images");
 
 //const tsconfig = require("./tsconfig.json");
 module.exports = withPlugins([
   [
-    withOptimizedImages,
+    /*   withOptimizedImages, */
     {
       // Configuración de Netlify
       /* target: "serverless", */

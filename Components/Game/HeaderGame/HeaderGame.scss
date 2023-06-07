@@ -42,7 +42,7 @@
         padding: 20px;
         font-size: 15px;
     }
-    &__buy{
+    &__buy {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -50,68 +50,129 @@
         color: $font-light;
         padding: 15px 20px;
         margin-top: 15px;
-
-        &-price{
-            display: flex;
-            flex-direction: column;
-
-            >p{
-                text-align: center;
-                color: $font-grey;
-                margin: 0;
-            }
-
-            &-actions{
-                display: flex;
-                justify-content: space-between;
-                align-items: baseline !important;
-
-                >p{
-                    margin: 0;
-                    font-weight: bold;
-                    //es el porcentaje
-                    &:first-of-type{
-                        font-size: 25px;
-                    }
-                    //precio FINAL
-                    &:last-of-type{
-                        font-size: 40px;
-                        color: $primary;
-                    }
-                }
-            }
-
+      
+        &-price {
+          display: flex;
+          flex-direction: column;
+      
+          > p {
+            text-align: center;
+            color: $font-grey;
+            margin: 0;
             
+          }
+      
+          &-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline !important;
+            @media only screen and (max-width: 991px) {
+                display: grid;
+            
+              }
+      
+            > p {
+              margin: 0;
+              font-weight: bold;
+              
+      
+              // Es el porcentaje
+              &:first-of-type {
+                font-size: 25px;
+              }
+              // Precio FINAL
+              &:last-of-type {
+                font-size: 40px;
+                color: $primary;
+                // Responsivo a partir de 767px
+  @media only screen and (max-width: 991px) {
+    font-size: 23px;
+    padding-left: 0px;
+    
 
-        }
-        &-btn.ui.button{
-            position: relative;
-            width: 200px;
-            background-color: $primary !important;
-            color: $font-light !important;
-            font-size: 20px;
-            padding: 20px 0;
-            left: -20px;
-            //esto incita al comprador darle click en el boton
-            transition: 0.2s;
-            // junto con transition para que haga la animacion
-            &:hover{
-                left: -15px;
+  }
+              }
             }
-
-            &:after{
-                position: absolute;
-                top: 10px;
-                right: -15px;
-                width: 36px;
-                height: 36px;
-                border-radius: 10px 4px 10px 0;
-                -ms-transform: rotate(45deg) skew(15deg, 15deg);
-                transform: rotate(45deg) skew(15deg, 15deg);
-                background-color: $primary;
-                content: "";
-
-            }
+          }
         }
-    }
+      
+        &-btn.ui.button {
+          position: relative;
+          width: 175px;
+          background-color: $primary !important;
+          color: $font-light !important;
+          font-size: 16px;
+          padding: 20px 0;
+          left: -20px;
+          // Esto incita al comprador a darle click en el botón
+          transition: 0.2s;
+           // Responsivo a partir de 767px
+  @media only screen and (max-width: 767px) {
+    width: 180px;
+    font-size: 18px;
+    padding: 15px 0;
+    left: -15px;
+    
+  }
+      
+          // Junto con transition para que haga la animación
+          &:hover {
+            left: -15px;
+          }
+      
+          &:after {
+            position: absolute;
+            top: 10px;
+            right: -15px;
+            width: 36px;
+            height: 36px;
+            border-radius: 10px 4px 10px 0;
+            -ms-transform: rotate(45deg) skew(15deg, 15deg);
+            transform: rotate(45deg) skew(15deg, 15deg);
+            background-color: $primary;
+            content: "";
+          }
+        }
+      
+        // Responsivo a partir de 767px
+        @media only screen and (max-width: 932px) {
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+      
+          &-price {
+            margin-top: 15px;
+            /* align-items: flex-start; */
+            
+            
+      
+            > p {
+              text-align: left;
+              
+              
+            }
+      
+            &-actions {
+              flex-direction: column;
+      
+              > p {
+                text-align: left;
+                margin-top: 5px;
+                
+              }
+            }
+          }
+      
+          &-btn.ui.button {
+            width: 100%;
+            margin-top: 15px;
+            left: 0;
+      
+            &:after {
+              display: none;
+            }
+          }
+        }
+      }
+      
 }

@@ -45,11 +45,6 @@ function OrderList(props) {
       {map(orders, (order) => (
         <Grid.Column mobile={16} table={6} computer={8} key={order.id}>
           <OrderInfo order={order} key={order.id} />
-          {/* {order?.game?.data?.attributes.title === undefined ? (
-            <p key={order.id}>Objeto sin imagen</p>
-          ) : (
-            <OrderInfo order={order} key={order.id} />
-          )} */}
         </Grid.Column>
       ))}
     </Grid>
