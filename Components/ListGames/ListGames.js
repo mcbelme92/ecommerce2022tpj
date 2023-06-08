@@ -1,7 +1,8 @@
 import React from "react";
-import { Image, Grid, GridColumn, GridRow, Card } from "semantic-ui-react";
+import { Grid, GridColumn, GridRow, Card } from "semantic-ui-react";
 import { map } from "lodash";
 import Link from "next/link";
+import Image from "next/image";
 import useWindowSize from "../../hooks/UseWindowSize";
 import {
   breakpointUpSm,
@@ -71,6 +72,8 @@ function GamesRender(props) {
                       src={poster}
                       alt="Product"
                       className="img-responsive"
+                      width={1024}
+                      height={1200}
                     />
                   </div>
                   <div className="wsk-cp-text">
