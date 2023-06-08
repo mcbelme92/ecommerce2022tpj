@@ -3,5 +3,5 @@ package = "@netlify/plugin-nextjs"
 
 [build]
 command = "yarn next build"
-publish = "next"
+publish = ".next"
 NETLIFY_NEXT_PLUGIN_SKIP = "true"
